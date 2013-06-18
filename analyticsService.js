@@ -35,4 +35,9 @@ angular.module('analytics', []).run(['$http', function ($http) {
 
 		return path + "?" + querystring;
 	};
+
+	return {
+		init : init
+	};
+
 });
