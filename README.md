@@ -1,10 +1,13 @@
 # Tracking Google Analytics Page Views with Angular.js
 
+Code based from https://github.com/isamuelson/angularjs-googleanalytics
+changed to meet a specific scenario where the account codes are dynamically provided.
+not planning on creating a pull request for such and edge case so mirrored.
+
 ## How?
 
 follow these step:
 
-- Set 'YOUR GOOGLE ACCOUNT' in googleanalyticis.js placeholder with your google account id
 - Add the service to your angular js app module:
 
 	``var app = angular.module('myapp', ['analytics']) {
@@ -12,10 +15,16 @@ follow these step:
 	});``
 
 
-- Now just have analytics to be injected in your contorller.
+- have analytics to be injected in your contorller.
 
 	``function myCtrl($rootScope, $scope, $http, analytics) {
 	    ...
+	};``
+	
+- pass the accounts by calling the init
+
+	``function myCtrl($rootScope, $scope, $http, analytics) {
+	    analytics.init(['Account one', 'Account Two', 'Account Seven']);
 	};``
 
 Code licensed under The MIT License. 
