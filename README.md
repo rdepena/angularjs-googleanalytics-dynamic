@@ -10,21 +10,27 @@ follow these step:
 
 - Add the service to your angular js app module:
 
-	``var app = angular.module('myapp', ['analytics']) {
+	```javascript
+	var app = angular.module('myapp', ['analytics']) {
 		...
-	});``
+	});
+	```
 
 
 - have analytics to be injected in your contorller.
 
-	``function myCtrl($rootScope, $scope, $http, analytics) {
+	```javascript 
+	function myCtrl($rootScope, $scope, $http, analytics) {
 	    ...
-	};``
+	};
+	```
 	
 - pass the accounts by calling the init
 
-	``function myCtrl($rootScope, $scope, $http, analytics) {
-	    analytics.init(['Account one', 'Account Two', 'Account Seven']);
-	};``
+	```javascript 
+	function myCtrl($rootScope, $scope, $http, analytics) {
+ 		analytics.init(['Account one', 'Account Two', 'Account Seven']);
+ 	};
+ 	```
 
 Code licensed under The MIT License. 
